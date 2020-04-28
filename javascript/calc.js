@@ -21,6 +21,10 @@ const getCalcValue = id => {
     if (result.status && /[0-9]/.test(reference)) globalList.splice(0, 1);
     else if (result.status && reference === '.') return;
     else if (globalList[0] === '0' && globalList.length === 1 && /[0-9]/.test(reference)) return;
+    else if (reference === '.') {
+        if (globalList[0].lastIndexOf('.') !== -1 && /[*/\-+]/.test(globalList[0]) === false) return;
+        else if (/[*/\-+]/.test(globalList[0]) === true && globalList[0].lastIndexOf('.') !== -1 && (globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('/') && globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('*') && globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('+') && globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('-'))) return;
+    }
 
     if (!(globalList.length === 0 && /[/*+.=]/.test(reference))) {
         if (/[0-9/*\-.+]/.test(reference) && (globalList.length === 0 || validChecker(globalList[0], reference))) {
