@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mykyta Koryliuk">
+    <meta name="description" content="This website is made for a portfolio of Mykyta Koryliuk. The idea is so simple because this one is just a calculator.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Browser App</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link type="image/png" rel="icon" href="../images/calculator.png">
+    <script type="text/javascript" src="../javascript/calc.js" defer></script>
+    <script type="text/javascript" src="../javascript/bg.js" defer></script>
+    <script type="text/javascript" src="../javascript/sl-anim.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="outter-part">
+                <div class="inner-part">
+                    <h1 id="fade-out-top" class="fade-out">Hey, dude! You can move me</h1>
+                    <h2 id="fade-out-right" class="fade-out">Press Enter to clear your input</h2>
+                    <h2 id="fade-out-left" class="fade-out">Maximum value for new circles is 800</h2>
+                    <div class="under-part"></div>
+                    <div class="mini-screen">
+                        <input type="text" id="output-field">
+                    </div>
+                    <div class="selection-field">
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="seven"><button id="seven-btn" class="super-btn" type="button" value="7">7</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="eight"><button id="eight-btn" class="super-btn" type="button" value="8">8</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="nine"><button id="nine-btn" class="super-btn" type="button" value="9">9</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="divide"><button id="divide-btn" class="super-btn" type="button" value="/">&divide;</button></div>
+                            
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="four"><button id="four-btn" class="super-btn" type="button" value="4">4</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="five"><button id="five-btn" class="super-btn" type="button" value="5">5</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="six"><button id="six-btn" class="super-btn" type="button" value="6">6</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="multiply"><button id="multiply-btn" class="super-btn" type="button" value="*">&times;</button></div>
+        
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="one"><button id="one-btn" class="super-btn" type="button" value="1">1</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="two"><button id="two-btn" class="super-btn" type="button" value="2">2</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="three"><button id="three-btn" class="super-btn" type="button" value="3">3</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="minus"><button id="minus-btn" class="super-btn" type="button" value="-">-</button></div>
+        
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="zero"><button id="zero-btn" class="super-btn" type="button" value="0">0</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="dot"><button id="dot-btn" class="super-btn" type="button" value=".">.</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="plus"><button id="plus-btn" class="super-btn" type="button" value="+">+</button></div>
+                        <div class="extra-block" onclick="dropEffects(this.id); getCalcValue(this.id);" id="equal"><button id="equal-btn" class="super-btn" type="button" value="=">=</button></div>
+                    </div>
+                </input>
+        </div>
+
+        <div class="icon-citation">
+            Icons made by <a href="https://www.flaticon.com/authors/dinosoftlabs" title="DinosoftLabs">DinosoftLabs</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+    </div>
+</body>
+</html>
