@@ -43,5 +43,15 @@ const getCalcValue = id => {
 
 document.body.addEventListener('keypress', () => {
     let keyCode = event.keyCode ? event.keyCode : event.which;
-    if (keyCode === 13) output.value = ''; globalList.length = 0; canvasAnimation(0);
+    if (keyCode === 13) {
+        output.value = '';
+        globalList.length = 0; 
+        canvasAnimation(0);
+    } else if(keyCode === 32) {
+        let arrayElementLen = globalList[0].length - 1;
+        let arrayElement = {...globalList[0]};
+            delete arrayElement[arrayElementLen];
+            globalList[0] = Array.from(Object.values(arrayElement)).join(''); 
+            displayCalcs();
+    }
 });
