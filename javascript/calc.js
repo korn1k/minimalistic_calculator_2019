@@ -13,6 +13,12 @@ const displayCalcs = () => {
             else output.style.fontSize = '55px';
                 if (getValueRounded(globalList[0]) <= 800) canvasAnimation(getValueRounded(globalList[0]));
                     output.scrollLeft = output.scrollWidth;
+
+                    if (Number.isFinite(parseFloat(document.querySelector('#output-field').value)) === false && globalList.length !== 0) {
+                        globalList.length = 0;
+                        getCalcValue('zero');
+                        return;
+                    }
 }
 
 const getCalcValue = id => {
@@ -24,7 +30,7 @@ const getCalcValue = id => {
     else if (reference === '.') {
         if (globalList[0].lastIndexOf('.') !== -1 && /[*/\-+]/.test(globalList[0]) === false) return;
         else if (/[*/\-+]/.test(globalList[0]) === true && globalList[0].lastIndexOf('.') !== -1 && (globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('/') && globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('*') && globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('+') && globalList[0].lastIndexOf('.') > globalList[0].lastIndexOf('-'))) return;
-    }
+    } 
 
     if (!(globalList.length === 0 && /[/*+.=]/.test(reference))) {
         if (/[0-9/*\-.+]/.test(reference) && (globalList.length === 0 || validChecker(globalList[0], reference))) {
@@ -48,10 +54,14 @@ document.body.addEventListener('keypress', () => {
         globalList.length = 0; 
         canvasAnimation(0);
     } else if(keyCode === 32) {
-        let arrayElementLen = globalList[0].length - 1;
-        let arrayElement = {...globalList[0]};
-            delete arrayElement[arrayElementLen];
-            globalList[0] = Array.from(Object.values(arrayElement)).join(''); 
+        if (globalList[0].length === 1) {
+            globalList.length = 0;
+        } else {
+            let arrayElementLen = globalList[0].length - 1;
+            let arrayElement = {...globalList[0]};
+                delete arrayElement[arrayElementLen];
+                globalList[0] = Array.from(Object.values(arrayElement)).join('');
+        }
             displayCalcs();
     }
 });
