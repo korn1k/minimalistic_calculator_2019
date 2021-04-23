@@ -3,7 +3,7 @@
 
 TECHNOLOGIES: JavaScript, HTML, CSS
 
-URL to view live example: https://korn1k.github.io/minimalistic_calculator_2019/html/index.html
+URL to view live example: https://korn1k.github.io/minimalistic_calculator_2019/html/index.html (ADEQUATE MOBILE VIEW INCLUDED)
 
 INSTALLATION ON YOUR LOCAL PC:
 
