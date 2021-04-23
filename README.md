@@ -1,5 +1,7 @@
 # minimalistic_calculator_2019
-A 'Can-Calculator' is used to perform some basic calculations; in short, this one is a trivial calculator with a few mini-animations.
+[PERSONAL] Minimalist Calculator is a web application for performing some basic calculations. You can press various UI and keyboard buttons to receive your calculated output; the number in the output area = the number of white circles in background.
+
+TECHNOLOGIES: JavaScript, HTML, CSS
 
 URL to view live example: https://korn1k.github.io/minimalistic_calculator_2019/html/index.html
 
